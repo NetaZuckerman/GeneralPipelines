@@ -11,7 +11,7 @@
 # requirements: samtools v1.10, bcftools v1.9, ivar v. 1.2.2, mafft v7.215
 trap "kill 0" EXIT
 eval "$(conda shell.bash hook)"
-conda activate CoronaPipeline  # TODO change
+conda activate GeneralPipeline
 
 path=`dirname "${0}"`
 
