@@ -156,8 +156,8 @@ function map_to_ref() {
     r2=${r1/R1/R2}
     output=${r1/_R1/}
     output=${output/_paired/}
-    if [[ $file == *.gz ]]; then
-      output=`basename "$output" .fastq.gz`
+    if [[ $r1 == *.gz ]]; then
+      output=`basename "$output"`
     else
       output=`basename "$output" .fastq`
     fi
