@@ -118,7 +118,7 @@ function single_end_mapping() {
     fi
 
     if [[ $file == *.gz ]]; then
-      output=`basename .fastq.gz`
+      output=`basename  "$file" .fastq.gz`
     else
       output=`basename "$file" .fastq`
     fi
