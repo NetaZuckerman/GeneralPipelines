@@ -11,7 +11,7 @@
 # requirements: samtools v1.10, bcftools v1.9, ivar v. 1.2.2, mafft v7.215
 trap "kill 0" EXIT
 eval "$(conda shell.bash hook)"
-conda activate CoronaPipeline
+conda activate GeneralPipeline
 
 path=`dirname "${0}"`
 
@@ -30,7 +30,7 @@ function usage() {
     cat <<EOF
 Usage: $0 [options]
 
-required: [-h | -d | -i AND -r]
+required: [-h | -i AND -r]
 -h| --help                      print this usage message and exit. Ignore the rest
 -i              [fastq.gz/path] input path to fastq.gz files location
 -r|--refseq     [refseq/path/]  user defined reference. required: refseq/path/ - path to reference fasta file
